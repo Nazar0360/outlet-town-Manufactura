@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: #f2f2f2;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+	text-align: center;
+	font-size: 36px;
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+
+.block {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px 0;
+	background-color: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	opacity: 0;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.block {
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.block:nth-child(2) {
+	animation-delay: 0s;
+}
+
+.block:nth-child(3) {
+	animation-delay: 0.25s;
+}
+
+.block:nth-child(4) {
+	animation-delay: 0.5s;
+}
+
+.block:nth-child(5) {
+	animation-delay: 0.75s;
+}
+
+.block:nth-child(6) {
+	animation-delay: 1s;
+}
+
+.block:nth-child(7) {
+	animation-delay: 1.5s;
+}
+
+.block img, iframe{
+	width: 384px;
+	height: 255px;
+	object-fit: cover;
+	margin-right: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.block p {
+	max-width: 50%;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+footer {
+	text-align: center;
+	margin-top: 40px;
+	font-size: 14px;
+	color: #888;
+}
+
+a {
+	color: #4CAF50;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+	color: #333;
+}
+
+@media screen and (max-width: 768px) {
+	.block {
+		flex-direction: column;
+	}
+
+	.block img {
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.block p {
+		max-width: 100%;
+	}
+}
+
+::selection {
+	background-color: #39853C;
+	color: white;
+}
